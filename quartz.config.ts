@@ -21,18 +21,11 @@ const config: QuartzConfig = {
       "private", 
       "templates", 
       ".obsidian",
-      "000-**",
-      "100-**", 
-      "200-**",
-      "300-Area/003-AICoding/prompt_example/**",
-      "500-**",
-      "600-**",
-      "700-**",
-      "999-**",
-      "Clippings/**",
-      "Excalidraw/**",
-      "Templates/**",
-      "*.base"
+      "**/003-AICoding/prompt_example/**",
+      "**/Private/**",
+      "300-Area/002-Programming/水球軟體設計模式精通之旅/**",
+      "400-Resource/Clippings/**",
+      "400-Resource/Templates/**"
     ],
     defaultDateType: "modified",
     theme: {

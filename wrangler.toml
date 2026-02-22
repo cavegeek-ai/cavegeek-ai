@@ -1,0 +1,14 @@
+name = "cavegeek-ai"
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "cavegeek-ai"
+
+[build]
+command = "npx quartz build"
+cwd = ""
+watch_dir = ""
+
+[[build.upload]]
+format = "directory" 
+dir = "public"

@@ -1,0 +1,52 @@
+name: Deploy Quartz site to Cloudflare Pages
+
+on:
+  push:
+    branches: [ v4, main ]
+  pull_request:
+    branches: [ v4, main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build with Quartz
+      run: npx quartz build
+      
+    - name: Upload build artifacts  
+      uses: actions/upload-artifact@v4
+      with:
+        name: public-site
+        path: public/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/v4' || github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: public-site
+        path: public/
+        
+    - name: Deploy to Cloudflare Pages
+      uses: cloudflare/wrangler-action@v3
+      with:
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        command: pages deploy public --project-name=cavegeek-ai --compatibility-date=2024-01-01
