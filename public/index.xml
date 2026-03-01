@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>cavegeek.ai</title>
+      <link>https://cavegeek.ai</link>
+      <description>最近的 10 條筆記 on cavegeek.ai</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>關於 cavegeek.ai</title>
+    <link>https://cavegeek.ai/about</link>
+    <guid>https://cavegeek.ai/about</guid>
+    <description><![CDATA[ 了解我們的使命與願景 ]]></description>
+    <pubDate>Sun, 22 Feb 2026 07:07:49 GMT</pubDate>
+  </item><item>
+    <title>歡迎來到 cavegeek.ai</title>
+    <link>https://cavegeek.ai/</link>
+    <guid>https://cavegeek.ai/</guid>
+    <description><![CDATA[ 知識探索與技術分享的數位洞穴 ]]></description>
+    <pubDate>Sun, 22 Feb 2026 07:07:49 GMT</pubDate>
+  </item><item>
+    <title>歡迎來到 cavegeek.ai - 我們的技術探索之旅開始了！</title>
+    <link>https://cavegeek.ai/posts/welcome</link>
+    <guid>https://cavegeek.ai/posts/welcome</guid>
+    <description><![CDATA[ 介紹 cavegeek.ai 的創建背景、技術架構以及我們對技術知識分享的願景 ]]></description>
+    <pubDate>Sat, 21 Feb 2026 16:00:00 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
